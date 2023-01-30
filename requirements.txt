@@ -1,0 +1,5 @@
+pandas
+requests
+slack_bolt
+scikit-learn
+xgboost

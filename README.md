@@ -1,2 +1,33 @@
 # slack-ml-predict2
-Slack API Technical Guide for Machine Learning - Prediction 2
+
+## Slack APIによるプログラミング　機械学習への応用編
+
+Slack APIチュートリアル「NodeJSとSlack APIによるいまどきのネットワークプログラミング」の応用編として機械学習向けにアプリを公開する。
+
+### UIから認識する
+
+天気と気温の組み合わせで最も売れた商品データを学習し、メニューUIを通して指定した天気と気温から売れる商品を予測する。
+
+#### 必要なライブラリをインストールする
+
+>$ pip install -r requirements.txt
+
+#### 環境変数を設定する
+
+- ファイルenv.tpl内のSLACK_BOT_TOKEN、SLACK_APP_TOKEN、SLACK_USER_TOKENに該当するトークン文字列を設定する
+- env.tplをenv.batに名前を変え、バッチを実行する
+  >$ ren env.tpl env.bat
+  >
+  >$ env.bat
+
+#### 最も売れる商品を予測する
+
+- 天気と気温の組み合わせで最も売れた商品データを学習し、指定した天気と気温で売れる商品を予測する
+
+- 起動方法
+  >$ python predict_products.py
+
+- スラッシュコマンド/drinksを起動し、天気と気温を入力する（30度を超える気温に設定しておく）
+- 「販売予測」ボタンをクリックすると、最も売れると予測されるドリンクがモーダルビューで提示される
+- 追加学習用のCSVファイル（DATA/drink_add.csv）をアップロードしたあと、「販売予測」ボタンを再度クリックする
+- 追加学習したドリンクに変わることを確認する
