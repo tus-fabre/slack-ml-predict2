@@ -60,7 +60,7 @@ def addDataFrame(df_info, train_file):
     df_train = pd.get_dummies(df_train)
     
     # データフレームを追加する
-    df_info["dataframe"] = df_info["dataframe"].append(df_train, ignore_index = True)
+    df_info["dataframe"] = pd.concat([df_info["dataframe"], df_train], ignore_index = True)
     df_info["weathers"] = weathers
     df_info["products"] = products
     print(df_info["dataframe"])
