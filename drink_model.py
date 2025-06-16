@@ -60,7 +60,9 @@ def addDataFrame(df_info, train_file):
     df_train = pd.get_dummies(df_train)
     
     # データフレームを追加する
-    df_info["dataframe"] = pd.concat([df_info["dataframe"], df_train], ignore_index = True)
+    #df_info["dataframe"] = df_info["dataframe"].append(df_train)
+    # pandas 2.0で廃止された機能
+    df_info["dataframe"] = pd.concat([df_info["dataframe"], df_train], ignore_index=True)
     df_info["weathers"] = weathers
     df_info["products"] = products
     print(df_info["dataframe"])
@@ -109,7 +111,7 @@ def createDataFrameInfo(train_file):
     df_train = pd.get_dummies(df_train)
 
     # 返り値を構成する
-    df_info["dataframe"] = df_train
+    df_info["dataframe"] = df_train.copy() # 複製を設定
     df_info["weathers"] = weathers
     df_info["products"] = products
     

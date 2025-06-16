@@ -14,6 +14,9 @@ from pathlib import Path
 import requests
 from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
+from dotenv import load_dotenv
+# .envファイルの内容を読み込見込む
+load_dotenv()
 
 # BOTトークンからアプリを初期化する
 slack_token=os.environ.get("SLACK_BOT_TOKEN")

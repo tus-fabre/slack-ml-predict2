@@ -1,12 +1,12 @@
-@echo off
-rem Slackアプリに用いる環境変数
-rem
-rem Botトークン
-set SLACK_BOT_TOKEN=xoxb-***
-rem アプリトークン
-set SLACK_APP_TOKEN=xapp-***
-rem ユーザートークン
-set SLACK_USER_TOKEN=xoxp-***
-rem ファイルを一時保存するフォルダー
-set LOCAL_FOLDER=_temp
-rem ----- END OF FILE -----
+#
+# 機械学習Slackデモアプリに用いる環境変数
+#
+# Botトークン
+SLACK_BOT_TOKEN=xoxb-***
+# アプリトークン
+SLACK_APP_TOKEN=xapp-***
+# ユーザートークン
+SLACK_USER_TOKEN=xoxp-***
+# ファイルを一時保存するフォルダー
+LOCAL_FOLDER=_temp
+# ----- END OF FILE -----
